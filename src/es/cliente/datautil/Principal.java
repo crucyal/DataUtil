@@ -1,5 +1,8 @@
 package es.cliente.datautil;
 
+import es.datautil.Data;
+import es.datautil.Meses;
+
 public class Principal {
 
 	public static void main(String[] args) {
@@ -24,6 +27,14 @@ public class Principal {
 		   
 		
 	    */ 
+		Data a1 = new Data();
+		
+		System.out.println(a1.diasMes(Meses.FEVEREIRO,2000));
+		System.out.println(a1.diasMes(Meses.JUNHO,2000));
+		
+		System.out.println(a1.anoBissexto(2019));
+		
+		System.out.println(a1.diasMes(Meses.AGOSTO));
 		
 		
 		

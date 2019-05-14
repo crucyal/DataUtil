@@ -43,8 +43,12 @@ public class Data {
 		// IMPLEMENTAR
 		// Implemente a lógica a partir do Fluxograma dado em anexo!
 		
+		if ((mes.getNumeroMes() <= 7 && mes.getNumeroMes() % 2 != 0) || (mes.getNumeroMes() >= 8 && mes.getNumeroMes() % 2 == 0)) {
+			
+			return 31;
+			 
+		}else {return 30;}
 		
-		return 0;
 	}
 	
 
@@ -64,10 +68,17 @@ public class Data {
 			
 		
 		// Se não for Meses.FEVEREIRO, ignora o ano e chama o método diasMes(mes)
+		if (mes==Meses.FEVEREIRO) {
+			if (anoBissexto(ano)==true) {
+				return 29;
+			}return 28;
+			//return anoBissexto(ano)?29:28;
+		}else {
+			if (diasMes(mes)==31) {
+				return 31;
+			}else {return 30;}
+		}
 		
-		
-		
-		return 0;
 	}
 
 	
